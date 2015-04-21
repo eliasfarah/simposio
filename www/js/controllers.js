@@ -19,10 +19,21 @@ angular.module('simposio.controllers', ['uiGmapgoogle-maps'])
 	
 })
 
-.controller('PalestrantesController', function($scope, Palestrantes){
-	Palestrantes.all(function(data){
-		$scope.palestrantes = data;
-	});
+.controller('PalestrantesController', function($scope, Palestrantes, $localstorage){
+	$scope.update = function() {
+		Palestrantes.all(function(data) {
+			$localstorage.setObject('palestrantes', data);
+			$scope.palestrantes = data;
+		});
+	}
+	
+	var palestrantes = $localstorage.getObject('palestrantes');
+		
+	if(angular.equals({}, palestrantes)) {
+		$scope.update();
+	} else {
+		$scope.palestrantes = palestrantes;
+	}
 })
 
 .controller('PalestranteDetalhesController', function($scope, $stateParams, Palestrantes) {
@@ -31,32 +42,47 @@ angular.module('simposio.controllers', ['uiGmapgoogle-maps'])
 	});
 })
 
-.controller('LocalizacaoController', function($scope) {
-	$scope.map = {center: {latitude: -23.555935, longitude: -46.632508 }, zoom: 17 };
+.controller('LocalizacaoController', function($scope, Localizacao, $localstorage) {
+	$scope.update = function() {
+		Localizacao.all(function(data) {
+			$localstorage.setObject('localizacao', data);
+			return data;
+		});
+	}
+	
+	var localizacao = $localstorage.getObject('localizacao');
+
+	if(angular.equals({}, localizacao)) {
+		localizacao = $scope.update();
+	}
+	
+	$scope.localizacao = localizacao;
+	$scope.map = {center: {latitude: localizacao.lat, longitude: localizacao.longi }, zoom: 17 };
 	$scope.marker = {
 	  id: 0,
 	  coords: {
-	    latitude: -23.555935,
-	    longitude: -46.632508
+	    latitude: localizacao.lat,
+	    longitude: localizacao.longi
 	  },
 	  options: { draggable: false }
 	};
+	
 })
 
 .controller('SobreController', function($scope, Sobre, $localstorage) {
-	// $scope.update = function() {
-		// Sobre.all(function(data) {
-			// $localstorage.setObject('sobre', data);
-			// $scope.sobre = data;
-		// });
-	// }
+	$scope.update = function() {
+		Sobre.all(function(data) {
+			$localstorage.setObject('sobre', data);
+			$scope.sobre = data;
+		});
+	}
 	
 	var sobre = $localstorage.getObject('sobre');
-	console.log(sobre.descricao);
-	// if(angular.equals({}, sobre)) {
-		// $scope.update();
-	// } else {
-		// $scope.sobre = sobre;
-	// }
+
+	if(angular.equals({}, sobre)) {
+		$scope.update();
+	} else {
+		$scope.sobre = sobre;
+	}
 	
 });

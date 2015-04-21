@@ -18,6 +18,15 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
   }
 })
 
+.factory('Localizacao', function($resource, $http) {
+	
+  return {
+    all: function(callback) {
+		$http.get('sources/localizacao.json').success(callback);
+    }
+  }
+})
+
 .factory('Sobre', function($resource, $http) {
 	
   return {
