@@ -1,25 +1,37 @@
-<ion-view title="Programação">
+<ion-view>
+	<ion-nav-title>
+      Programação
+    </ion-nav-title>
+	<ion-nav-buttons side="secondary">
+		<button class="button" ng-click="update()"><i class="icon ion-ios-refresh-empty"></i></button>
+    </ion-nav-buttons>
 	<ion-content class="has-header padding">
 
 		<div ng-repeat="programacao in programacoes">
-			<div class="card">
-			  <div class="item item-divider">
-			    <div class="row">
-					<div class="col">{{programacao.titulo}}</div>
+			<div class="card">			
+				<div class="item item-divider">					
+					{{programacao.titulo}}					
 				</div>
-				<div class="row">
-					<div ng-repeat="palestrante in programacao.palestrantes">
+				<div class="item item-text-wrap" ng-hide="!programacao.palestrantes.length">
+					<div class="row" ng-hide="!programacao.palestrantes.length">
 						<div class="col">
-							<img class="avatar" src="{{palestrante}}">
+							<i class="icon ion-ios-people"></i> Palestrantes
 						</div>
 					</div>
-				</div>
-				<div class="item item-text-wrap">
+					<div class="row">
+						<div ng-repeat="palestrante in programacao.palestrantes">
+							<div class="col">								
+								<a href="#/tab/palestrante/{{palestrante.id}}">								
+									<img class="avatar" ng-src="{{palestrante.img}}">
+								</a>
+							</div>
+						</div>
+					</div>
 				    {{programacao.descricao}}
 				</div>
-				<div class="item item-divider">
-				    {{programacao.horario}}
-				  </div>
+				<div class="item item-text-wrap">
+				    <i class="icon ion-clock"></i> {{programacao.horario}}
+				</div>
 			  </div>
 			</div>
 		</div>

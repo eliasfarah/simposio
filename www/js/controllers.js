@@ -1,4 +1,4 @@
-angular.module('simposio.controllers', ['uiGmapgoogle-maps'])
+angular.module('simposio.controllers', ['uiGmapgoogle-maps','ion-affix'])
 
 .controller('ProgramacaoController', function($scope, Programacoes, $localstorage) {
 	
@@ -10,7 +10,7 @@ angular.module('simposio.controllers', ['uiGmapgoogle-maps'])
 	}
 	
 	var programacoes = $localstorage.getObject('programacoes');
-		
+
 	if(angular.equals({}, programacoes)) {
 		$scope.update();
 	} else {

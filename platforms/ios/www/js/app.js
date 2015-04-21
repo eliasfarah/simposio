@@ -1,4 +1,4 @@
-angular.module('tabs', ['ionic','simposio.controllers', 'simposio.services'])
+angular.module('simposio', ['ionic','simposio.controllers', 'simposio.services'])
 
 
 .config(function($stateProvider, $urlRouterProvider) {

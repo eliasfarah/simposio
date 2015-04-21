@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="tabs">
+<html ng-app="simposio">
   <head>
     <meta charset="utf-8">
     <title>Simpósio Científico CEJAM</title>
@@ -13,18 +13,19 @@
 	<script src="lib/maps/angular-google-maps.min.js"></script>
 	<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
 	<script src="js/services.js"></script>
+	<script src="js/utils.js"></script>
 	<script src="js/controllers.js"></script>
 	<script src="js/app.js"></script>
 	
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="cordova.js"></script>
   </head>
-	<body>
+	<body class="platform-ios platform-cordova platform-webview">
 		
 		<!-- 
 	      The nav bar that will be updated as we navigate between views.
 	    -->
-	    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+	    <ion-nav-bar class="bar-positive nav-title-slide-ios7">
 	      <ion-nav-back-button class="button-icon icon ion-chevron-left">
 	        Voltar
 	      </ion-nav-back-button>

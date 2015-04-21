@@ -1,19 +1,21 @@
-<ion-view title="{{palestrante.nome}}">
-  <ion-content has-header="true" padding="true">
+<ion-view>
+	<ion-nav-title>
+      {{palestrante.nome}}
+    </ion-nav-title>
+	<ion-content has-header="true" padding="true">
 	<div class="list card">
-
 	  <div class="item item-avatar">
-	    <img src="{{palestrante.img}}">
-	    <h2>{{palestrante.nome}}</h2>
-	    <p>{{palestrante.nascimento}}</p>
+		<img src="{{palestrante.img}}">
+		<h2>{{palestrante.nome}}</h2>
+		<p>{{palestrante.nascimento}}</p>
 	  </div>
 
 	  <div class="item item-body">
-	    <p>
-	      {{palestrante.curriculo}}
-	    </p>
+		<p>
+		  {{palestrante.curriculo}}
+		</p>
 	  </div>
 
 	</div>
-  </ion-content>
+	</ion-content>
 </ion-view>

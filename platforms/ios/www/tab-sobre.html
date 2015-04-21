@@ -1,5 +1,11 @@
-<ion-view title="Sobre">
-  <ion-content class="has-header padding">
-    <h1>Sobre</h1>
-  </ion-content>
+<ion-view>
+	<ion-nav-title>
+      O Evento
+    </ion-nav-title>
+	<ion-nav-buttons side="secondary">
+		<button class="button" ng-click="update()"><i class="icon ion-ios-refresh-empty"></i></button>
+	</ion-nav-buttons>
+	<ion-content class="has-header padding">
+		<div ng-bind-html="sobre.descricao"></div>
+	</ion-content>
 </ion-view>
