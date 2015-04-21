@@ -1,0 +1,36 @@
+2015-04-18 10:03:34.920 simposio[1271:90511] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/eliasfarah/Library/Developer/CoreSimulator/Devices/2E221CED-2B58-4B8F-9C1E-43692E768C37/data/Containers/Data/Application/2571F838-C758-4F94-8DB4-259AC9A2ED4B/Library/Cookies/Cookies.binarycookies
+2015-04-18 10:03:35.191 simposio[1271:90511] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-18 10:03:35.192 simposio[1271:90511] Multi-tasking -> Device: YES, App: YES
+2015-04-18 10:03:35.216 simposio[1271:90511] Unlimited access to network resources
+2015-04-18 10:03:35.568 simposio[1271:90511] [CDVTimer][keyboard] 0.071943ms
+2015-04-18 10:03:35.568 simposio[1271:90511] [CDVTimer][TotalPluginStartup] 0.253975ms
+2015-04-18 10:03:36.200 simposio[1271:90511] Resetting plugins due to page load.
+2015-04-18 10:03:36.699 simposio[1271:90511] Finished load of: file:///Users/eliasfarah/Library/Developer/CoreSimulator/Devices/2E221CED-2B58-4B8F-9C1E-43692E768C37/data/Containers/Bundle/Application/B279C2D5-4837-451E-9C08-6D7E9F1994DC/simposio.app/www/index.html#/tab/dash
+2015-04-18 10:04:08.505 simposio[1271:91052] Communications error: <OS_xpc_error: <error: 0x2d945f4> { count = 1, contents =
+	"XPCErrorDescription" => <string: 0x2d9483c> { length = 22, contents = "Connection interrupted" }
+}>
+2015-04-18 10:04:08.513 simposio[1271:91099] Terminating since there is no system app.
+2015-04-18 23:07:53.009 simposio[1702:92392] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/eliasfarah/Library/Developer/CoreSimulator/Devices/2E221CED-2B58-4B8F-9C1E-43692E768C37/data/Containers/Data/Application/BFF143C1-6A2C-489A-A806-7CAF02DDA338/Library/Cookies/Cookies.binarycookies
+2015-04-18 23:07:53.297 simposio[1702:92392] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-18 23:07:53.298 simposio[1702:92392] Multi-tasking -> Device: YES, App: YES
+2015-04-18 23:07:53.314 simposio[1702:92392] Unlimited access to network resources
+2015-04-18 23:07:53.663 simposio[1702:92392] [CDVTimer][keyboard] 0.059009ms
+2015-04-18 23:07:53.663 simposio[1702:92392] [CDVTimer][TotalPluginStartup] 0.250995ms
+2015-04-18 23:07:53.917 simposio[1702:92392] Resetting plugins due to page load.
+2015-04-18 23:07:54.172 simposio[1702:92392] Finished load of: file:///Users/eliasfarah/Library/Developer/CoreSimulator/Devices/2E221CED-2B58-4B8F-9C1E-43692E768C37/data/Containers/Bundle/Application/E81833D4-8C4E-4CC5-9069-4C5D3E920BFC/simposio.app/www/index.html
+2015-04-19 11:45:17.933 simposio[1434:42075] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/eliasfarah/Library/Developer/CoreSimulator/Devices/2E221CED-2B58-4B8F-9C1E-43692E768C37/data/Containers/Data/Application/74FA0DA9-6532-4717-9DAA-89D91680A9E2/Library/Cookies/Cookies.binarycookies
+2015-04-19 11:45:18.229 simposio[1434:42075] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-19 11:45:18.230 simposio[1434:42075] Multi-tasking -> Device: YES, App: YES
+2015-04-19 11:45:18.250 simposio[1434:42075] Unlimited access to network resources
+2015-04-19 11:45:18.612 simposio[1434:42075] [CDVTimer][keyboard] 0.065982ms
+2015-04-19 11:45:18.612 simposio[1434:42075] [CDVTimer][TotalPluginStartup] 0.263035ms
+2015-04-19 11:45:19.073 simposio[1434:42075] Resetting plugins due to page load.
+2015-04-19 11:45:19.338 simposio[1434:42075] Finished load of: file:///Users/eliasfarah/Library/Developer/CoreSimulator/Devices/2E221CED-2B58-4B8F-9C1E-43692E768C37/data/Containers/Bundle/Application/B05F204F-9604-4F40-9C13-2A122C362C60/simposio.app/www/index.html#/tab/programacao
+2015-04-19 17:12:01.758 simposio[2894:151784] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/eliasfarah/Library/Developer/CoreSimulator/Devices/2E221CED-2B58-4B8F-9C1E-43692E768C37/data/Containers/Data/Application/009D4680-88CF-4F06-9959-AF84C00BE9AE/Library/Cookies/Cookies.binarycookies
+2015-04-19 17:12:02.121 simposio[2894:151784] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-19 17:12:02.122 simposio[2894:151784] Multi-tasking -> Device: YES, App: YES
+2015-04-19 17:12:02.147 simposio[2894:151784] Unlimited access to network resources
+2015-04-19 17:12:02.491 simposio[2894:151784] [CDVTimer][keyboard] 0.055969ms
+2015-04-19 17:12:02.491 simposio[2894:151784] [CDVTimer][TotalPluginStartup] 0.225961ms
+2015-04-19 17:12:02.819 simposio[2894:151784] Resetting plugins due to page load.
+2015-04-19 17:12:03.177 simposio[2894:151784] Finished load of: file:///Users/eliasfarah/Library/Developer/CoreSimulator/Devices/2E221CED-2B58-4B8F-9C1E-43692E768C37/data/Containers/Bundle/Application/D9EC1846-848B-412D-B314-420357B78F60/simposio.app/www/index.html#/tab/programacao

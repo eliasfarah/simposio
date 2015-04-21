@@ -1,0 +1,27 @@
+<ion-view title="Programação">
+	<ion-content class="has-header padding">
+
+		<div ng-repeat="programacao in programacoes">
+			<div class="card">
+			  <div class="item item-divider">
+			    <div class="row">
+					<div class="col">{{programacao.titulo}}</div>
+				</div>
+				<div class="row">
+					<div ng-repeat="palestrante in programacao.palestrantes">
+						<div class="col">
+							<img class="avatar" src="{{palestrante}}">
+						</div>
+					</div>
+				</div>
+				<div class="item item-text-wrap">
+				    {{programacao.descricao}}
+				</div>
+				<div class="item item-divider">
+				    {{programacao.horario}}
+				  </div>
+			  </div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

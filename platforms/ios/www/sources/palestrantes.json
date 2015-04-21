@@ -1,0 +1,30 @@
+[
+    {
+        "id": 0,
+        "img": "http://ionicframework.com/img/docs/blue-album.jpg",
+        "nome": "Elias Farah",
+        "curriculo": "Elias é ...",
+        "legenda": "Supervisor Desenv. Sistemas"
+    },
+    {
+        "id": 1,
+        "img": "http://ionicframework.com/img/docs/siamese-dream.jpg",
+        "nome": "G.I. Joe",
+        "curriculo": "G.I. Joe é ...",
+        "legenda": "Analista de Sistemas"
+    },
+    {
+        "id": 2,
+        "img": "http://ionicframework.com/img/docs/dookie.jpg",
+        "nome": "Miss Frizzle",
+        "curriculo": "Miss Frizzle é...",
+        "legenda": "Analista de BD"
+    },
+    {
+        "id": 3,
+        "img": "http://ionicframework.com/img/docs/nevermind.jpg",
+        "nome": "Ash Ketchum",
+        "curriculo": "Ash Ketchum é...",
+        "legenda": "Programador"
+    }
+]

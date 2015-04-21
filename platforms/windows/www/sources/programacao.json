@@ -1,0 +1,28 @@
+﻿[
+    {
+        "id": 0,
+        "palestrantes": [
+            "http://ionicframework.com/img/docs/blue-album.jpg",
+            "http://ionicframework.com/img/docs/siamese-dream.jpg"
+        ],
+        "titulo": "Abertura",
+        "descricao": "Abertura do evento",
+        "horario": "10h às 12h00min"
+    },
+	{
+        "id": 1,
+        "palestrantes": [],
+        "titulo": "Coffe",
+        "descricao": "Tempo livre",
+        "horario": "12h às 13h00min"
+    },
+	{
+        "id": 2,
+        "palestrantes": [
+            "http://ionicframework.com/img/docs/siamese-dream.jpg"
+        ],
+        "titulo": "TI com Qualidade",
+        "descricao": "Usando framework....",
+        "horario": "14h30min às 16h00min"
+    }
+]

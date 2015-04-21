@@ -1,0 +1,14 @@
+<ion-view title="Palestrantes">
+  <ion-content class="has-header">
+   <div class="list">
+
+    <a class="item item-thumbnail-left" ng-repeat="palestrante in palestrantes" type="item-text-wrap" href="#/tab/palestrante/{{palestrante.id}}">
+      <img src="{{palestrante.img}}">
+      <h2>{{palestrante.nome}}</h2>
+      <p>{{palestrante.legenda}}</p>
+    </a>
+
+</div>
+  </ion-content>
+</ion-view>
+
