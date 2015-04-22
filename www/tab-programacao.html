@@ -5,15 +5,24 @@
 	<ion-nav-buttons side="secondary">
 		<button class="button" ng-click="update()"><i class="icon ion-ios-refresh-empty"></i></button>
     </ion-nav-buttons>
-	 <ion-content delegate-handle="scrollHandle" on-scroll="checkPosition()" sticky>
-	    <div class="list">
- 			<div class="item-container" ng-repeat="programacao in programacoes">
-			    <div class="item item-divider">{{programacao[0].data}}</div>
-			    <div class="item">A</div>
-			    <div class="item">B</div>
-			    <div class="item">C</div>
-			    <div class="item">D</div>
-			 </div>
+	 <ion-content scroll-event-interval="5">		
+		<div>
+			<div ng-repeat="programacao in programacoes">
+				<div class="group-list">
+					<div class="list">
+						<div class="item item-divider" ion-affix data-affix-within-parent-with-class="group-list">
+							{{programacao[0].data}}
+							<span class="badge badge-royal">{{n}}</span>
+						</div>					
+						<div class="item item-text-wrap" ng-repeat="palestra in programacao">
+							{{palestra.titulo}}
+							<br/>
+							{{palestra.horario}}
+						</div>						
+					</div>
+				</div>
+			</div>
 		</div>
+		
 	  </ion-content>
 </ion-view>
