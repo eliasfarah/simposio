@@ -5,21 +5,15 @@
 	<ion-nav-buttons side="secondary">
 		<button class="button" ng-click="update()"><i class="icon ion-ios-refresh-empty"></i></button>
     </ion-nav-buttons>
-	<ion-content class="has-header" scroll="true">
-		<div>
-		    <div ng-repeat="programacao in programacoes">
-		        <div class="group-list">
-		            <div class="list">
-		                <div class="item item-divider" ion-affix data-affix-within-parent-with-class="group-list">
-		                    <i class="icon ion-ios-calendar-outline"></i> {{programacao[0].data}}
-		                </div>
-		                <a class="item" href="#" ng-repeat="palestra in programacao">					
-				{{palestra.titulo}} <br />
-				{{palestra.horario}}
-			</a>
-		            </div>
-		        </div>
-		    </div>
+	 <ion-content delegate-handle="scrollHandle" on-scroll="checkPosition()" sticky>
+	    <div class="list">
+ 			<div class="item-container" ng-repeat="programacao in programacoes">
+			    <div class="item item-divider">{{programacao[0].data}}</div>
+			    <div class="item">A</div>
+			    <div class="item">B</div>
+			    <div class="item">C</div>
+			    <div class="item">D</div>
+			 </div>
 		</div>
-	</ion-content>
+	  </ion-content>
 </ion-view>

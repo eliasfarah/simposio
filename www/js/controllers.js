@@ -1,4 +1,4 @@
-angular.module('simposio.controllers', ['uiGmapgoogle-maps','ion-affix'])
+angular.module('simposio.controllers', ['uiGmapgoogle-maps','stickyDividers'])
 
 .controller('ProgramacaoController', function($scope, Programacoes, $localstorage) {
 	
