@@ -1,11 +1,12 @@
-angular.module('simposio.controllers', ['uiGmapgoogle-maps','ion-affix'])
+angular.module('simposio.controllers', ['uiGmapgoogle-maps'])
 
-.controller('ProgramacaoController', function($scope, Programacoes, $localstorage) {
+.controller('ProgramacaoController', function($scope, Programacoes, $localstorage, $ionicScrollDelegate) {
 	
 	$scope.update = function() {
 		Programacoes.all(function(data) {
 			$localstorage.setObject('programacoes', data);
 			$scope.programacoes = data;
+			$scope.$broadcast('scroll.refreshComplete');
 		});
 	}
 	
@@ -24,6 +25,7 @@ angular.module('simposio.controllers', ['uiGmapgoogle-maps','ion-affix'])
 		Palestrantes.all(function(data) {
 			$localstorage.setObject('palestrantes', data);
 			$scope.palestrantes = data;
+			$scope.$broadcast('scroll.refreshComplete');
 		});
 	}
 	
@@ -46,6 +48,7 @@ angular.module('simposio.controllers', ['uiGmapgoogle-maps','ion-affix'])
 	$scope.update = function() {
 		Localizacao.all(function(data) {
 			$localstorage.setObject('localizacao', data);
+			$scope.$broadcast('scroll.refreshComplete');
 			return data;
 		});
 	}
@@ -74,6 +77,7 @@ angular.module('simposio.controllers', ['uiGmapgoogle-maps','ion-affix'])
 		Sobre.all(function(data) {
 			$localstorage.setObject('sobre', data);
 			$scope.sobre = data;
+			$scope.$broadcast('scroll.refreshComplete');
 		});
 	}
 	
