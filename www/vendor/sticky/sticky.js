@@ -1,3 +1,4 @@
+/* http://codepen.io/mhartington/pen/cbxiC */
 angular.module('stickyDividers', ['ionic'])
 .directive('sticky', function($ionicScrollDelegate) {
 	var options,
