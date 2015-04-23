@@ -1,0 +1,30 @@
+<ion-view view-title="Detalhes">
+
+	<ion-content has-header="true" padding="true">
+		<div>
+			{{palestra.titulo}}
+		</div>
+		<hr />
+		<div class="row">
+			<i class="icon ion-ios-calendar-outline"></i>&nbsp;<b>{{palestra.data}}</b>
+		</div>		
+		<div class="row">
+			<i class="icon ion-ios-clock-outline"></i>&nbsp;{{palestra.horario}}
+		</div>
+		<hr />
+		<div>
+			<i class="ion-ios-people-outline"></i> Palestrantes
+		</div>
+		<ion-scroll direction="x" class="wide-as-needed">
+			<a href="#/tab/palestrante/{{palestrante.id}}" ng-repeat="palestrante in palestra.palestrantes"><img ng-src="{{palestrante.img}}" class="avatar" ></a>
+		</ion-scroll>
+		
+		<hr />
+		<div>
+			<div class="row">
+				<i class="icon ion-clipboard"></i>&nbsp; Descrição
+			</div>
+			<p ng-bind-html="palestra.descricao"></p>
+		</div>	
+	</ion-content>
+</ion-view>
