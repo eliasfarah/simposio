@@ -8,21 +8,20 @@
 			on-refresh="update()">
 		</ion-refresher>
 		<div>
-			<div ng-repeat="programacao in programacoes">
+			<div ng-repeat="(key, programacao) in programacoes">
 				<div class="group-list">
 					<div class="list">
 						<div class="item item-divider">
-							{{programacao[0].data}}							
-						</div>					
-						<div class="item item-text-wrap" ng-repeat="palestra in programacao">
+							{{key}}							
+						</div>											
+						<a href="#/tab/programacao/{{palestra.id}}" class="item item-text-wrap" ng-repeat="palestra in programacao">
 							{{palestra.titulo}}
 							<br/>
 							<h4>{{palestra.horario}}</h4>
-						</div>						
+						</a>
 					</div>
 				</div>
 			</div>
-		</div>
-		
+		</div>		
 	  </ion-content>
 </ion-view>

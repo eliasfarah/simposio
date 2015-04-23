@@ -28,6 +28,15 @@ angular.module('simposio', ['ionic','simposio.controllers', 'simposio.services']
       }
     })
 
+	.state('tab.programacao-detalhes', {
+      url: '/programacao/:programacaoId',
+      views: {
+        'tab-programacao': {
+          templateUrl: 'programacao-detalhes.html',
+          controller: 'ProgramacaoDetalhesController'
+        }
+      }
+    })
     .state('tab.palestrantes', {
       url: '/palestrantes',
       views: {

@@ -1,6 +1,6 @@
 angular.module('simposio.controllers', ['uiGmapgoogle-maps'])
 
-.controller('ProgramacaoController', function($scope, Programacoes, $localstorage, $ionicScrollDelegate) {
+.controller('ProgramacaoController', function($scope, Programacoes, $localstorage) {
 	
 	$scope.update = function() {
 		Programacoes.all(function(data) {
@@ -18,6 +18,39 @@ angular.module('simposio.controllers', ['uiGmapgoogle-maps'])
 		$scope.programacoes = programacoes;
 	}
 	
+})
+
+.controller('ProgramacaoDetalhesController', function($scope, $stateParams, $localstorage, Programacoes) {
+	var buscarProgramacao = function(programacoes, programacaoId) {
+		var result;
+		angular.forEach(programacoes, function(programacao, data) {
+			angular.forEach(programacao, function(palestra, keyprog) {
+				if(palestra.id == programacaoId) {
+					palestra.data = data;
+					result = palestra;
+					return ;
+				}
+			});			
+		});
+		return result;
+	}	
+	
+	$scope.update = function() {
+		Programacoes.all(function(data) {
+			$localstorage.setObject('programacoes', data);
+			$scope.$broadcast('scroll.refreshComplete');
+			return data;
+		});
+	}
+	
+	var programacoes = $localstorage.getObject('programacoes');
+	
+	if(angular.equals({}, programacoes)) {
+		programacoes = $scope.update();
+		$scope.palestra = buscarProgramacao($scope.programacoes, $stateParams.programacaoId);		
+	} else {
+		$scope.palestra = buscarProgramacao(programacoes, $stateParams.programacaoId);
+	}	
 })
 
 .controller('PalestrantesController', function($scope, Palestrantes, $localstorage){
