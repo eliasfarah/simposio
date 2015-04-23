@@ -37,6 +37,17 @@ angular.module('simposio', ['ionic','simposio.controllers', 'simposio.services']
         }
       }
     })
+
+    .state('tab.programacao-palestrante-detalhes', {
+      url: '/programacao-palestrante/:palestranteId',
+      views: {
+        'tab-programacao': {
+          templateUrl: 'palestrante-detalhes.html',
+          controller: 'PalestranteDetalhesController'
+        }
+      }
+    })
+
     .state('tab.palestrantes', {
       url: '/palestrantes',
       views: {
