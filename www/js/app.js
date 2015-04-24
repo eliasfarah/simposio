@@ -1,5 +1,11 @@
 angular.module('simposio', ['ionic','simposio.controllers', 'simposio.services'])
 
+.run(function() {
+    if(window.StatusBar) {
+      StatusBar.overlaysWebView(true);
+      StatusBar.style(1) //Light
+    }
+})
 
 .config(function($stateProvider, $urlRouterProvider) {
 
