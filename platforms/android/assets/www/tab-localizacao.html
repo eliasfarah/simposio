@@ -1,8 +1,14 @@
-<ion-view title="Localização">
-  <ion-content class="has-header padding">
+<ion-view>
+	<ion-nav-title>
+      Localização
+    </ion-nav-title>
+	<ion-nav-buttons side="secondary">
+		<button class="button" ng-click="update()"><i class="icon ion-ios-refresh-empty"></i></button>
+	</ion-nav-buttons>
+	<ion-content class="has-header padding">
 		<div class="card">
 		  <div class="item item-text-wrap">
-		    O Local do evento será na Dr. Lund, 41, Liberadade - São Paulo- SP - Brazil
+			 {{localizacao.endereco}}
 		  </div>
 		</div>    	
 	    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">

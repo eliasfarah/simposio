@@ -4,7 +4,8 @@ angular.module('simposio', ['ionic','simposio.controllers', 'simposio.services']
     if(window.StatusBar) {
       StatusBar.overlaysWebView(true);
       StatusBar.style(1) //Light
-    }
+	  StatusBar.styleHex('#FFFFFF') //red
+	  }
 })
 
 .config(function($stateProvider, $urlRouterProvider) {

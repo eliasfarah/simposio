@@ -1,8 +1,10 @@
 <ion-view view-title="O Evento">
-	<ion-nav-buttons side="secondary">
-		<button class="button" ng-click="update()"><i class="icon ion-ios-refresh-empty"></i></button>
-	</ion-nav-buttons>
+	<ion-nav-title>O Evento</ion-nav-title>
 	<ion-content class="has-header padding">
+		<ion-refresher
+			pulling-text="Puxe para atualizar..."
+			on-refresh="update()">
+		</ion-refresher>
 		<div ng-bind-html="sobre.descricao"></div>
 	</ion-content>
 </ion-view>

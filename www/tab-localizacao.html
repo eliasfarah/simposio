@@ -1,11 +1,10 @@
-<ion-view>
-	<ion-nav-title>
-      Localização
-    </ion-nav-title>
-	<ion-nav-buttons side="secondary">
-		<button class="button" ng-click="update()"><i class="icon ion-ios-refresh-empty"></i></button>
-	</ion-nav-buttons>
+<ion-view view-title="Localização">
+	<ion-nav-title>Localização</ion-nav-title>
 	<ion-content class="has-header padding">
+		<ion-refresher
+			pulling-text="Puxe para atualizar..."
+			on-refresh="update()">
+		</ion-refresher>
 		<div class="card">
 		  <div class="item item-text-wrap">
 			 {{localizacao.endereco}}

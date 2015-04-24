@@ -1,0 +1,126 @@
+[
+    [
+		{
+	        "id": 0,
+			"data":"10 de novembro",
+	        "palestrantes": [
+	            {
+	                "id": 0,
+	                "img": "http://ionicframework.com/img/docs/blue-album.jpg"
+	            },
+	            {
+	                "id": 1,
+	                "img": "http://ionicframework.com/img/docs/siamese-dream.jpg"
+	            }
+	        ],
+	        "titulo": "Cerimônia de Abertura",
+	        "descricao": "O empenho em analisar a contínua expansão de nossa atividade. A nível organizacional, a complexidade dos estudos efetuados desafia a capacidade de equalização das condições inegavelmente apropriadas",
+	        "horario": "10h às 12h00min"
+	    },
+	    {
+	        "id": 1,
+	        "palestrantes": [],
+	        "titulo": "Coffe",
+	        "descricao": "Tempo livre",
+	        "horario": "12h às 13h00min"
+	    },
+	    {
+	        "id": 2,
+	        "palestrantes": [
+	            {
+	                "id": 0,
+	                "img": "http://ionicframework.com/img/docs/blue-album.jpg"
+	            }
+	        ],
+	        "titulo": "Saúde com Qualidade",
+	        "descricao": "Assim mesmo, a valorização de fatores subjetivos apresenta tendências no sentido de aprovar a manutenção do investimento em reciclagem técnica.  Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a adoção de políticas descentralizadoras faz parte de um processo de gerenciamento dos modos de operação convencionais. É claro que o entendimento das metas propostas garante a contribuição de um grupo importante na determinação das condições financeiras e administrativas exigidas.",
+	        "horario": "14h30min às 16h00min"
+	    },
+		{
+	        "id": 3,
+	        "palestrantes": [
+	            {
+	                "id": 0,
+	                "img": "http://ionicframework.com/img/docs/blue-album.jpg"
+	            }
+	        ],
+	        "titulo": "Qualidade com ONA",
+	        "descricao": "Assim mesmo, a valorização de fatores subjetivos apresenta tendências no sentido de aprovar a manutenção do investimento em reciclagem técnica.  Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a adoção de políticas descentralizadoras faz parte de um processo de gerenciamento dos modos de operação convencionais. É claro que o entendimento das metas propostas garante a contribuição de um grupo importante na determinação das condições financeiras e administrativas exigidas.",
+	        "horario": "14h30min às 16h00min"
+	    },
+		{
+	        "id": 4,
+	        "palestrantes": [
+	            {
+	                "id": 0,
+	                "img": "http://ionicframework.com/img/docs/blue-album.jpg"
+	            }
+	        ],
+	        "titulo": "Eficiência na Saúde",
+	        "descricao": "Assim mesmo, a valorização de fatores subjetivos apresenta tendências no sentido de aprovar a manutenção do investimento em reciclagem técnica.  Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a adoção de políticas descentralizadoras faz parte de um processo de gerenciamento dos modos de operação convencionais. É claro que o entendimento das metas propostas garante a contribuição de um grupo importante na determinação das condições financeiras e administrativas exigidas.",
+	        "horario": "14h30min às 16h00min"
+	    },
+		{
+	        "id": 5,
+	        "palestrantes": [
+	            {
+	                "id": 0,
+	                "img": "http://ionicframework.com/img/docs/blue-album.jpg"
+	            }
+	        ],
+	        "titulo": "SUS",
+	        "descricao": "Assim mesmo, a valorização de fatores subjetivos apresenta tendências no sentido de aprovar a manutenção do investimento em reciclagem técnica.  Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a adoção de políticas descentralizadoras faz parte de um processo de gerenciamento dos modos de operação convencionais. É claro que o entendimento das metas propostas garante a contribuição de um grupo importante na determinação das condições financeiras e administrativas exigidas.",
+	        "horario": "14h30min às 16h00min"
+	    },
+		{
+	        "id": 6,
+	        "palestrantes": [
+	            {
+	                "id": 0,
+	                "img": "http://ionicframework.com/img/docs/blue-album.jpg"
+	            }
+	        ],
+	        "titulo": "SUS",
+	        "descricao": "Assim mesmo, a valorização de fatores subjetivos apresenta tendências no sentido de aprovar a manutenção do investimento em reciclagem técnica.  Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a adoção de políticas descentralizadoras faz parte de um processo de gerenciamento dos modos de operação convencionais. É claro que o entendimento das metas propostas garante a contribuição de um grupo importante na determinação das condições financeiras e administrativas exigidas.",
+	        "horario": "14h30min às 16h00min"
+	    }
+	],
+	[	
+		{
+	        "id": 7,
+			"data":"11 de novembro",
+	        "palestrantes": [
+	            {
+	                "id": 0,
+	                "img": "http://ionicframework.com/img/docs/blue-album.jpg"
+	            },
+	            {
+	                "id": 1,
+	                "img": "http://ionicframework.com/img/docs/siamese-dream.jpg"
+	            }
+	        ],
+	        "titulo": "Cerimônia de Abertura",
+	        "descricao": "O empenho em analisar a contínua expansão de nossa atividade. A nível organizacional, a complexidade dos estudos efetuados desafia a capacidade de equalização das condições inegavelmente apropriadas",
+	        "horario": "10h às 12h00min"
+	    },
+	    {
+	        "id": 8,
+	        "palestrantes": [],
+	        "titulo": "Coffe",
+	        "descricao": "Tempo livre",
+	        "horario": "12h às 13h00min"
+	    },
+	    {
+	        "id": 8,
+	        "palestrantes": [
+	            {
+	                "id": 0,
+	                "img": "http://ionicframework.com/img/docs/blue-album.jpg"
+	            }
+	        ],
+	        "titulo": "Saúde com Qualidade",
+	        "descricao": "Assim mesmo, a valorização de fatores subjetivos apresenta tendências no sentido de aprovar a manutenção do investimento em reciclagem técnica.  Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a adoção de políticas descentralizadoras faz parte de um processo de gerenciamento dos modos de operação convencionais. É claro que o entendimento das metas propostas garante a contribuição de um grupo importante na determinação das condições financeiras e administrativas exigidas.",
+	        "horario": "14h30min às 16h00min"
+	    }		
+	]
+]

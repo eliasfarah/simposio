@@ -1,7 +1,11 @@
 <ion-view view-title="Palestrantes">
+	<ion-nav-title>Palestrantes</ion-nav-title>
 	<ion-content class="has-header">
+		<ion-refresher
+			pulling-text="Puxe para atualizar..."
+			on-refresh="update()">
+		</ion-refresher>
 		<div class="list">
-
 			<a class="item item-thumbnail-left" ng-repeat="palestrante in palestrantes" type="item-text-wrap" href="#/tab/palestrante/{{palestrante.id}}">
 			  <img ng-src="{{palestrante.img}}">
 			  <h2>{{palestrante.nome}}</h2>

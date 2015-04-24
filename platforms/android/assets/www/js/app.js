@@ -1,5 +1,11 @@
-angular.module('tabs', ['ionic','simposio.controllers', 'simposio.services'])
+angular.module('simposio', ['ionic','simposio.controllers', 'simposio.services'])
 
+.run(function() {
+    if(window.StatusBar) {
+      StatusBar.overlaysWebView(true);
+      StatusBar.style(1) //Light
+    }
+})
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -24,6 +30,26 @@ angular.module('tabs', ['ionic','simposio.controllers', 'simposio.services'])
         'tab-programacao': {
           templateUrl: 'tab-programacao.html',
           controller: 'ProgramacaoController'
+        }
+      }
+    })
+
+	.state('tab.programacao-detalhes', {
+      url: '/programacao/:programacaoId',
+      views: {
+        'tab-programacao': {
+          templateUrl: 'programacao-detalhes.html',
+          controller: 'ProgramacaoDetalhesController'
+        }
+      }
+    })
+
+    .state('tab.programacao-palestrante-detalhes', {
+      url: '/programacao-palestrante/:palestranteId',
+      views: {
+        'tab-programacao': {
+          templateUrl: 'palestrante-detalhes.html',
+          controller: 'PalestranteDetalhesController'
         }
       }
     })
