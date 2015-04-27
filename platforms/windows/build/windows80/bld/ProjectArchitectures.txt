@@ -1,1 +1,0 @@
-C:\Projects\Workspace\simposio\platforms\windows\CordovaApp.Windows80.jsproj;neutral
