@@ -10,9 +10,6 @@
         "com.ionic.keyboard": {
             "PACKAGE_NAME": "simposio"
         },
-        "org.apache.cordova.console": {
-            "PACKAGE_NAME": "simposio"
-        },
         "org.apache.cordova.device": {
             "PACKAGE_NAME": "simposio"
         }

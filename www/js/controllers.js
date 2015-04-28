@@ -82,27 +82,36 @@ angular.module('simposio.controllers', ['uiGmapgoogle-maps'])
 		Localizacao.all(function(data) {
 			$localstorage.setObject('localizacao', data);
 			$scope.$broadcast('scroll.refreshComplete');
-			return data;
+			$scope.localizacao = data;
 		});
 	}
 	
 	var localizacao = $localstorage.getObject('localizacao');
 
 	if(angular.equals({}, localizacao)) {
-		localizacao = $scope.update();
+		$scope.update();
+	} else {
+		$scope.localizacao = localizacao;
 	}
 	
-	$scope.localizacao = localizacao;
-	$scope.map = {center: {latitude: localizacao.lat, longitude: localizacao.longi }, zoom: 17 };
-	$scope.marker = {
-	  id: 0,
-	  coords: {
-	    latitude: localizacao.lat,
-	    longitude: localizacao.longi
-	  },
-	  options: { draggable: false }
+	$scope.map = {
+		center: {
+			latitude: $scope.localizacao.lat, 
+			longitude: $scope.localizacao.longi 
+		}, 
+		zoom: 17 
 	};
 	
+	$scope.marker = {
+		id: 0,
+		coords: {
+			latitude: $scope.localizacao.lat,
+			longitude: $scope.localizacao.longi
+		},
+		options: { 
+			draggable: false
+		}
+	};	
 })
 
 .controller('SobreController', function($scope, Sobre, $localstorage) {
