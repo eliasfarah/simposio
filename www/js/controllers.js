@@ -1,12 +1,13 @@
-angular.module('simposio.controllers', ['uiGmapgoogle-maps'])
+angular.module('simposio.controllers', [])
 
-.controller('ProgramacaoController', function($scope, Programacoes, $localstorage) {
-	
+.controller('ProgramacaoController', function($scope, Programacoes, $localstorage, $utils) {
+	$utils.show();
 	$scope.update = function() {
 		Programacoes.all(function(data) {
 			$localstorage.setObject('programacoes', data);
 			$scope.programacoes = data;
 			$scope.$broadcast('scroll.refreshComplete');
+			$utils.hide();
 		});
 	}
 	
@@ -16,11 +17,13 @@ angular.module('simposio.controllers', ['uiGmapgoogle-maps'])
 		$scope.update();
 	} else {
 		$scope.programacoes = programacoes;
+		$utils.hide();
 	}
 	
 })
 
-.controller('ProgramacaoDetalhesController', function($scope, $stateParams, $localstorage, Programacoes) {
+.controller('ProgramacaoDetalhesController', function($scope, $stateParams, $localstorage, Programacoes, $utils) {
+	$utils.show();
 	var buscarProgramacao = function(programacoes, programacaoId) {
 		var result;
 		angular.forEach(programacoes, function(programacao, data) {
@@ -39,6 +42,7 @@ angular.module('simposio.controllers', ['uiGmapgoogle-maps'])
 		Programacoes.all(function(data) {
 			$localstorage.setObject('programacoes', data);
 			$scope.$broadcast('scroll.refreshComplete');
+			$utils.hide();
 			return data;
 		});
 	}
@@ -50,15 +54,18 @@ angular.module('simposio.controllers', ['uiGmapgoogle-maps'])
 		$scope.palestra = buscarProgramacao($scope.programacoes, $stateParams.programacaoId);		
 	} else {
 		$scope.palestra = buscarProgramacao(programacoes, $stateParams.programacaoId);
+		$utils.hide();
 	}	
 })
 
-.controller('PalestrantesController', function($scope, Palestrantes, $localstorage){
+.controller('PalestrantesController', function($scope, Palestrantes, $localstorage, $utils){
+	$utils.show();
 	$scope.update = function() {
 		Palestrantes.all(function(data) {
 			$localstorage.setObject('palestrantes', data);
 			$scope.palestrantes = data;
 			$scope.$broadcast('scroll.refreshComplete');
+			$utils.hide();
 		});
 	}
 	
@@ -68,58 +75,70 @@ angular.module('simposio.controllers', ['uiGmapgoogle-maps'])
 		$scope.update();
 	} else {
 		$scope.palestrantes = palestrantes;
-	}
+		$utils.hide();
+	}	
 })
 
-.controller('PalestranteDetalhesController', function($scope, $stateParams, Palestrantes) {
+.controller('PalestranteDetalhesController', function($scope, $stateParams, Palestrantes, $utils) {
+	$utils.show();
 	Palestrantes.all(function(data){
 		$scope.palestrante = data[$stateParams.palestranteId];
+		$utils.hide();
 	});
 })
 
-.controller('LocalizacaoController', function($scope, Localizacao, $localstorage) {
+.controller('LocalizacaoController', function($scope, Localizacao, $utils, $compile) {
+	$utils.show();
+	/* Atualização ajax */
 	$scope.update = function() {
 		Localizacao.all(function(data) {
-			$localstorage.setObject('localizacao', data);
-			$scope.$broadcast('scroll.refreshComplete');
 			$scope.localizacao = data;
+			$scope.initialize();
+			$utils.hide();
 		});
 	}
-	
-	var localizacao = $localstorage.getObject('localizacao');
+			
+	$scope.update();
 
-	if(angular.equals({}, localizacao)) {
-		$scope.update();
-	} else {
-		$scope.localizacao = localizacao;
+	/* Inicializa Google Maps */
+	$scope.initialize = function () {
+		var myLatlng = new google.maps.LatLng($scope.localizacao.lat,$scope.localizacao.longi, $utils);
+		
+		var mapOptions = {
+			center: myLatlng,
+			zoom: 16,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+		/* Cria o balão */
+		var marker = new google.maps.Marker({
+			position: myLatlng,
+			map: map,
+			title: 'Localização do Evento'
+		});
+		/* Cria texto do balão */
+		var contentString = "<div>"+$scope.localizacao.endereco+"</div>";
+        var compiled = $compile(contentString)($scope);	
+		var infowindow = new google.maps.InfoWindow({
+			content: compiled[0]
+        });
+		
+		google.maps.event.addListener(marker, 'click', function() {
+			infowindow.open(map, marker);
+		});
+
+		$scope.map = map;
 	}
-	
-	$scope.map = {
-		center: {
-			latitude: $scope.localizacao.lat, 
-			longitude: $scope.localizacao.longi 
-		}, 
-		zoom: 17 
-	};
-	
-	$scope.marker = {
-		id: 0,
-		coords: {
-			latitude: $scope.localizacao.lat,
-			longitude: $scope.localizacao.longi
-		},
-		options: { 
-			draggable: false
-		}
-	};	
 })
 
-.controller('SobreController', function($scope, Sobre, $localstorage) {
+.controller('SobreController', function($scope, Sobre, $localstorage, $utils) {
+	$utils.show();
 	$scope.update = function() {
 		Sobre.all(function(data) {
 			$localstorage.setObject('sobre', data);
 			$scope.sobre = data;
 			$scope.$broadcast('scroll.refreshComplete');
+			$utils.hide();
 		});
 	}
 	
@@ -130,5 +149,5 @@ angular.module('simposio.controllers', ['uiGmapgoogle-maps'])
 	} else {
 		$scope.sobre = sobre;
 	}
-	
+	$utils.hide();
 });

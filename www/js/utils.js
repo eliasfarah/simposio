@@ -15,4 +15,16 @@ angular.module('ionic.utils', [])
       return JSON.parse($window.localStorage[key] || '{}');
     }
   }
+}])
+.factory('$utils', ['$ionicLoading', function($ionicLoading){
+	return {
+		show: function() {
+			$ionicLoading.show({
+				template: 'Carregando...'
+			});
+		},
+		hide: function() {
+			$ionicLoading.hide();
+		}
+	}	
 }]);
