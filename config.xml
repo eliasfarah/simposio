@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.cejam.simposio" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.cejam.simposio" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Simpósio Científico CEJAM</name>
   <description>
-        Simpósio Científico CEJAM
-    </description>
+    Simpósio Científico CEJAM
+  </description>
   <author email="suporte@cejam.org.br" href="http://www.cejam.org.br">
-	CEJAM
-    </author>
+	   CEJAM
+  </author>
   <content src="index.html"/>
+  <!-- Enable requests to content: URLs -->
+  <allow-navigation href="*" />
+  <allow-intent href="*" />
   <access origin="*"/>
+
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
