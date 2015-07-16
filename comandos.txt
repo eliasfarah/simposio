@@ -1,0 +1,7 @@
+"C:\Projects\Workspace\simposio\platforms\android\ant-build\MainActivity-release-unsigned.apk"
+#keytool -genkey -v -keystore my-release-key.keystore -alias simposio -keyalg RSA -keysize 2048 -validity 10000
+
+ionic build android
+cordova build --release android
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore "C:\Projects\Workspace\simposio\platforms\android\build\outputs\apk\android-release-unsigned.apk" simposio
+"C:\Users\Elias\AppData\Local\Android\sdk\build-tools\21.1.2\zipalign.exe" -v 4 "C:\Projects\Workspace\simposio\platforms\android\ant-build\MainActivity-release-unsigned.apk" "C:\Projects\Workspace\simposio\platforms\android\ant-build\Simposio.apk"
