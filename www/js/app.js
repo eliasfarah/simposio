@@ -1,16 +1,4 @@
-angular.module('simposio', ['ionic','ngCordova','ionic.service.core','ionic.service.push','simposio.controllers', 'simposio.services'])
-
-.config(['$ionicAppProvider', function($ionicAppProvider) {
-  // Identify app
-  $ionicAppProvider.identify({
-    // The App ID for the server
-    app_id: 'd76eca25',
-    // The API key all services will use for this app
-    api_key: '6236e2025f2c649467b05268c2693d1c98f6686e2993c8f4',
-    // Set the app to use development pushes
-    dev_push: true
-  });
-}])
+angular.module('simposio', ['ionic','simposio.controllers', 'simposio.services'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 	
@@ -85,6 +73,16 @@ angular.module('simposio', ['ionic','ngCordova','ionic.service.core','ionic.serv
         'tab-localizacao': {
           templateUrl: 'tab-localizacao.html',
           controller: 'LocalizacaoController'
+        }
+      }
+    })
+
+    .state('tab.premio', {
+      url: '/premio',
+      views: {
+        'tab-premio': {
+          templateUrl: 'tab-premio.html',
+          controller: 'PremioController'
         }
       }
     })

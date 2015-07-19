@@ -6,12 +6,6 @@
 			on-refresh="update()">
 		</ion-refresher>
 		<div>
-			<button class="button button-block button-dark" ng-click="identifyUser()">
-			  Identify a user
-			</button>
-			<button class="button button-block button-positive" ng-if="identified" ng-click="pushRegister()">
-			  Register for Push
-			</button>
 			<div ng-repeat="(key, programacao) in programacoes">
 				<div class="group-list">
 					<div class="list">

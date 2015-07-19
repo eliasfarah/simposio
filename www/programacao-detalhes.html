@@ -1,23 +1,20 @@
 <ion-view view-title="Detalhes">	
 	<ion-nav-title>Detalhes</ion-nav-title>
-	<ion-content has-header="true" padding="true">	
-		<div class="list card">
+	<ion-content has-header="true" padding="true">
+		<h4>{{palestra.titulo}}</h4>
+		<div class="list card">		
 			<div class="item item-body">
-				<img src="img/cejam.png" width="20px"> {{palestra.titulo}}
+				<i class="icon ion-android-time"></i>&nbsp;{{palestra.data}} - &nbsp;{{palestra.horario}}
 			</div>		
 			<div class="item item-body">
-				<i class="icon ion-ios-calendar-outline"></i>&nbsp;{{palestra.data}}
-					<br />
-				<i class="icon ion-ios-clock-outline"></i>&nbsp;<span class="small bold">{{palestra.horario}}</span>
-			</div>		
-			<div class="item item-body">
-				<i class="icon ion-ios-people"></i> Palestrantes
-				<ion-scroll direction="x" class="wide-as-needed">
-					<a href="#/tab/programacao-palestrante/{{palestrante.id}}" ng-repeat="palestrante in palestra.palestrantes"><img ng-src="{{palestrante.img}}" class="avatar" ></a>
-				</ion-scroll>
+				<i class="icon ion-chatbubbles"></i> Palestrantes
+
+					<ion-scroll direction="x" class="wide-as-needed">
+						<a href="#/tab/programacao-palestrante/{{palestrante.id}}" ng-repeat="palestrante in palestra.palestrantes"><img ng-src="{{palestrante.img}}" class="avatar" ></a>
+					</ion-scroll>
 			</div>
 			<div class="item item-body">
-				<i class="icon ion-clipboard"></i>&nbsp; Descrição
+				<i class="icon ion-drag"></i>&nbsp; Descrição
 				<p ng-bind-html="palestra.descricao"></p>
 			</div>
 		</div>
