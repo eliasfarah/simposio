@@ -33,3 +33,16 @@
 .scroll {
   height: 100%;
 }
+
+.azul-cejam{
+    background-color: #2f3291 !important;
+ }
+
+.tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
+    color: #2f3291 !important;
+
+}
+
+.tab-item {
+	color: #bfc4de !important;	
+}
