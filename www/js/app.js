@@ -1,12 +1,16 @@
-angular.module('simposio', ['ionic','simposio.controllers', 'simposio.services'])
+angular.module('simposio', ['ionic','ngCordova','ionic.service.core','ionic.service.push','simposio.controllers', 'simposio.services'])
 
-.run(function() {
-    if(window.StatusBar) {
-      StatusBar.overlaysWebView(true);
-      StatusBar.style(1) //Light
-	  StatusBar.styleHex('#FFFFFF') //red
-	  }
-})
+.config(['$ionicAppProvider', function($ionicAppProvider) {
+  // Identify app
+  $ionicAppProvider.identify({
+    // The App ID for the server
+    app_id: 'd76eca25',
+    // The API key all services will use for this app
+    api_key: '6236e2025f2c649467b05268c2693d1c98f6686e2993c8f4',
+    // Set the app to use development pushes
+    dev_push: true
+  });
+}])
 
 .config(function($stateProvider, $urlRouterProvider) {
 	

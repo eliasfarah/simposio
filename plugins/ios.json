@@ -27,6 +27,10 @@
                         {
                             "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PushPlugin\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -44,6 +48,9 @@
             "PACKAGE_NAME": "com.cejam.simposio"
         },
         "org.apache.cordova.device": {
+            "PACKAGE_NAME": "com.cejam.simposio"
+        },
+        "com.phonegap.plugins.PushPlugin": {
             "PACKAGE_NAME": "com.cejam.simposio"
         }
     },
