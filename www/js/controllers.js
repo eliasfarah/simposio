@@ -152,12 +152,46 @@ angular.module('simposio.controllers', [])
 	}
 })
 
-.controller('PremioController', function($scope, Sobre, $localstorage, $utils) {
+.controller('PremioController', function($scope, Sobre, $localstorage, $utils, Premio) {
+	$utils.show();
+	$scope.update = function() {
+		Premio.all(function(data) {
+			$localstorage.setObject('premios', data);
+			$scope.premios = data;
+			$scope.$broadcast('scroll.refreshComplete');
+			$utils.hide();
+		});
+	}
 	
+	var premios = $localstorage.getObject('premios');
+
+	if(angular.equals({}, premios)) {
+		$scope.update();
+	} else {
+		$scope.premios = premios;
+	}
+	$utils.hide();
 })
 
-.controller('PremioRegulamentoController', function($scope, Sobre, $localstorage, $utils) {
+.controller('PremioRegulamentoController', function($scope, Sobre, $localstorage, $utils,Premio) {
+	$utils.show();
+	$scope.update = function() {
+		Premio.all(function(data) {
+			$localstorage.setObject('premios', data);
+			$scope.premios = data;
+			$scope.$broadcast('scroll.refreshComplete');
+			$utils.hide();
+		});
+	}
+	
+	var premios = $localstorage.getObject('premios');
 
+	if(angular.equals({}, premios)) {
+		$scope.update();
+	} else {
+		$scope.premios = premios;
+	}
+	$utils.hide();
 })
 
 .controller('SobreController', function($scope, Sobre, $localstorage, $utils) {

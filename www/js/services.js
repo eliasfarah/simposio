@@ -45,6 +45,20 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
   }
 })
 
+.factory('Premio', function($resource, $http, $localstorage, $utils) {
+  return {
+    all: function(success_callback) {
+      $http.post(remote_server+'premio.php')
+      .success(success_callback)
+      .error(function(data, status, headers, config) {
+        alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");
+        $scope.$broadcast('scroll.refreshComplete');
+        $utils.hide();
+      });
+    }
+  }
+})
+
 .factory('Sobre', function($resource, $http, $localstorage, $utils) {
 	
   return {
