@@ -5,9 +5,9 @@ header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
 header("Content-Type: application/json");
 $json = <<<EOF
 {
-	"lat": "-23.555935",
-	"longi": "-46.632508",
-	"endereco": "O local do evento será na Dr. Lund, 43, Liberadade - São Paulo- SP - Brazil"
+	"lat": "-23.5989686",
+	"longi": "-46.7147256",
+	"endereco": "Av. Albert Einstein, 627 - Morumbi - São Paulo- SP - Brasil"
 }
 EOF;
 echo $json;
