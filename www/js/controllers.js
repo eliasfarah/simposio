@@ -1,22 +1,24 @@
 angular.module('simposio.controllers', [])
 
-.controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
+.controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate, $localstorage) {
  
-  // Called to navigate to the main app
-  $scope.startApp = function() {
-    $state.go('tab.programacao');
-  };
-  $scope.next = function() {
-    $ionicSlideBoxDelegate.next();
-  };
-  $scope.previous = function() {
-    $ionicSlideBoxDelegate.previous();
-  };
+	var intro = $localstorage.getObject('intro');
 
-  // Called each time the slide changes
-  $scope.slideChanged = function(index) {
-    $scope.slideIndex = index;
-  };
+	if(angular.equals({}, intro)) {
+		$localstorage.setObject('intro', { showed: true });
+	} else {
+		$state.go('tab.programacao');		
+	}
+
+	// Called to navigate to the main app
+	$scope.startApp = function() {
+		$state.go('tab.programacao');
+	};
+
+	// Called each time the slide changes
+	$scope.slideChanged = function(index) {
+		$scope.slideIndex = index;
+	};
 })
 
 .controller('ProgramacaoController', function($scope, Programacoes, $localstorage, $utils) {

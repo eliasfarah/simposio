@@ -20,7 +20,7 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
 	
   return {
     all: function(success_callback) {
-		  $http.post(remote_server+'programacao.php')
+		  $http.post(remote_server+'programacao.json')
       .success(success_callback)
       .error(function(data, status, headers, config) {
         alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");
