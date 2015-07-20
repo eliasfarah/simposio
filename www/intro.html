@@ -1,33 +1,16 @@
-<style>
-	.slider {
-	  height: 100%;
-	}
-
-	.slider-slide {
-	  padding-top: 80px;
-	  color: #000;
-	  background-color: #fff;
-	  text-align: center;	 
-	  font-weight: 300;
-	}
-
-</style>
 <ion-view view-title="Introdução">
 	<ion-nav-title>Introdução</ion-nav-title>
 	<ion-nav-buttons side="right">
-      <button class="button button-default button-clear no-animation"
-              ng-click="startApp()" ng-show="!slideIndex">
-      	Pular
-      </button>
-      <button class="button button-default button-clear no-animation"
-		      ng-click="startApp()" ng-show="slideIndex == 2">
+  		<button class="button button-default button-clear no-animation" ng-click="startApp()" ng-show="!slideIndex">
+      		Pular
+      	</button>
+      	<button class="button button-default button-clear no-animation" ng-click="startApp()" ng-show="slideIndex == 2">
 			Ir ao App
 		</button>
     </ion-nav-buttons>
 	<ion-slide-box on-slide-changed="slideChanged(index)">
 		<ion-slide>
 			Slide 1
-			
 		</ion-slide>
 		<ion-slide>
 			Slide 2

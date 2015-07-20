@@ -92,6 +92,16 @@ angular.module('simposio', ['ionic','simposio.controllers', 'simposio.services']
       }
     })
 
+    .state('tab.regulamento', {
+      url: '/premio/regulamento',
+      views: {
+        'tab-premio': {
+          templateUrl: 'tab-premio-regulamento.html',
+          controller: 'PremioRegulamentoController'
+        }
+      }
+    })
+
     .state('tab.sobre', {
       url: '/sobre',
       views: {
@@ -103,6 +113,6 @@ angular.module('simposio', ['ionic','simposio.controllers', 'simposio.services']
     })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/tab/programacao');
 
 });

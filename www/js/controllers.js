@@ -1,15 +1,6 @@
 angular.module('simposio.controllers', [])
 
 .controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate, $localstorage) {
- 
-	var intro = $localstorage.getObject('intro');
-
-	if(angular.equals({}, intro)) {
-		$localstorage.setObject('intro', { showed: true });
-	} else {
-		$state.go('tab.programacao');		
-	}
-
 	// Called to navigate to the main app
 	$scope.startApp = function() {
 		$state.go('tab.programacao');
@@ -21,7 +12,16 @@ angular.module('simposio.controllers', [])
 	};
 })
 
-.controller('ProgramacaoController', function($scope, Programacoes, $localstorage, $utils) {
+.controller('ProgramacaoController', function($scope, $state, Programacoes, $localstorage, $utils) {
+	var intro = $localstorage.getObject('intro');
+
+	if(angular.equals({}, intro)) {
+		$localstorage.setObject('intro', { showed: true });
+		$state.go('intro');
+	} else {
+		$state.go('tab.programacao');
+	}
+
 	$utils.show();
 	$scope.update = function() {
 		Programacoes.all(function(data) {
@@ -153,6 +153,10 @@ angular.module('simposio.controllers', [])
 })
 
 .controller('PremioController', function($scope, Sobre, $localstorage, $utils) {
+	
+})
+
+.controller('PremioRegulamentoController', function($scope, Sobre, $localstorage, $utils) {
 
 })
 
