@@ -8,6 +8,11 @@ angular.module('simposio', ['ionic','simposio.controllers', 'simposio.services']
   // Each state's controller can be found in controllers.js
   $stateProvider
 
+    .state('intro', {
+      url: '/',
+      templateUrl: 'intro.html',
+      controller: 'IntroCtrl'
+    })
     // setup an abstract state for the tabs directive
     .state('tab', {
       url: "/tab",
@@ -98,6 +103,6 @@ angular.module('simposio', ['ionic','simposio.controllers', 'simposio.services']
     })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/programacao');
+  $urlRouterProvider.otherwise('/');
 
 });

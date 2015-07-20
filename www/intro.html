@@ -1,0 +1,50 @@
+<style>
+	.slider {
+	  height: 100%;
+	}
+
+	.slider-slide {
+	  padding-top: 80px;
+	  color: #000;
+	  background-color: #fff;
+	  text-align: center;	 
+	  font-weight: 300;
+	}
+
+</style>
+<ion-view view-title="O Intro">
+	<ion-nav-title>O Evento</ion-nav-title>
+	<ion-nav-buttons side="left">
+      <button class="button button-default button-clear no-animation"
+              ng-click="startApp()" ng-show="!slideIndex">
+        Pular Introdução
+      </button>
+      <button class="button button-default button-clear no-animation"
+              ng-click="previous()" ng-show="slideIndex > 0">
+        Anterior
+      </button>
+    </ion-nav-buttons>
+	<ion-nav-buttons side="right"> 
+		<button class="button button-default button-clear no-animation"
+		      ng-click="next()" ng-show="slideIndex != 2">
+		Próximo
+		</button>
+		<button class="button button-default button-clear no-animation"
+		      ng-click="startApp()" ng-show="slideIndex == 2">
+		Começar a usar o Aplicativo
+		</button>
+    </ion-nav-buttons>
+	<ion-slide-box on-slide-changed="slideChanged(index)">
+		<ion-slide>
+			Slide 1
+
+			
+		</ion-slide>
+		<ion-slide>
+			Slide 2
+		</ion-slide>
+		<ion-slide>
+			Slide 3
+		</ion-slide>
+    </ion-slide-box>	
+</ion-view>
