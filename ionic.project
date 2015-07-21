@@ -1,4 +1,10 @@
 {
   "name": "Simpósio Científico CEJAM",
-  "app_id": "d76eca25"
+  "app_id": "d76eca25",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://sis.cejam.org.br/simposio"
+    }
+  ]
 }

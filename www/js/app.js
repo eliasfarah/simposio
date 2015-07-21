@@ -1,5 +1,9 @@
 angular.module('simposio', ['ionic','simposio.controllers', 'simposio.services'])
 
+.constant('ApiEndpoint', {
+  url: 'http://sis.cejam.org.br/simposio/'
+})
+
 .config(function($stateProvider, $urlRouterProvider) {
 	
   // Ionic uses AngularUI Router which uses the concept of states

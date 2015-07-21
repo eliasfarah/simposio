@@ -1,11 +1,10 @@
-var remote_server = 'http://sis.cejam.org.br/simposio/';
 angular.module('simposio.services', ['ngResource','ionic.utils'])
 
-.factory('Palestrantes', function($resource, $http, $localstorage, $utils) {
+.factory('Palestrantes', function($resource, $http, $localstorage, $utils, ApiEndpoint) {
 	
   return {
-    all: function(success_callback) {
-		  $http.post(remote_server+'palestrantes.php')
+    all: function(success_callback) {      
+		  $http.post(ApiEndpoint.url+'palestrantes.php')
       .success(success_callback)
       .error(function(data, status, headers, config) {        
         alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");                
@@ -16,11 +15,11 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
   }
 })
 
-.factory('Programacoes', function($resource, $http, $localstorage, $utils) {
+.factory('Programacoes', function($resource, $http, $localstorage, $utils, ApiEndpoint) {
 	
   return {
     all: function(success_callback) {
-		  $http.post(remote_server+'programacao.php')
+		  $http.post(ApiEndpoint.url+'programacao.json')
       .success(success_callback)
       .error(function(data, status, headers, config) {
         alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");
@@ -31,10 +30,10 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
   }
 })
 
-.factory('Localizacao', function($resource, $http, $localstorage, $utils) {
+.factory('Localizacao', function($resource, $http, $localstorage, $utils, ApiEndpoint) {
   return {
     all: function(success_callback) {
-		  $http.post(remote_server+'localizacao.php')
+		  $http.post(ApiEndpoint.url+'localizacao.php')
       .success(success_callback)
       .error(function(data, status, headers, config) {
         alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");
@@ -45,10 +44,10 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
   }
 })
 
-.factory('Premio', function($resource, $http, $localstorage, $utils) {
+.factory('Premio', function($resource, $http, $localstorage, $utils, ApiEndpoint) {
   return {
     all: function(success_callback) {
-      $http.post(remote_server+'premio.php')
+      $http.post(ApiEndpoint.url+'premio.php')
       .success(success_callback)
       .error(function(data, status, headers, config) {
         alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");
@@ -59,11 +58,11 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
   }
 })
 
-.factory('Sobre', function($resource, $http, $localstorage, $utils) {
+.factory('Sobre', function($resource, $http, $localstorage, $utils, ApiEndpoint) {
 	
   return {
     all: function(success_callback) {
-		  $http.post(remote_server+'sobre.php')
+		  $http.post(ApiEndpoint.url+'sobre.php')
       .success(success_callback)
       .error(function(data, status, headers, config) {
         alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");
