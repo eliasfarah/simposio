@@ -4,7 +4,7 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
 	
   return {
     all: function(success_callback) {      
-		  $http.post(ApiEndpoint.url+'palestrantes.php')
+		  $http.post(ApiEndpoint.url+'palestrantes.json')
       .success(success_callback)
       .error(function(data, status, headers, config) {        
         alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");                
@@ -33,7 +33,7 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
 .factory('Localizacao', function($resource, $http, $localstorage, $utils, ApiEndpoint) {
   return {
     all: function(success_callback) {
-		  $http.post(ApiEndpoint.url+'localizacao.php')
+		  $http.post(ApiEndpoint.url+'localizacao.json')
       .success(success_callback)
       .error(function(data, status, headers, config) {
         alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");
@@ -47,7 +47,7 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
 .factory('Premio', function($resource, $http, $localstorage, $utils, ApiEndpoint) {
   return {
     all: function(success_callback) {
-      $http.post(ApiEndpoint.url+'premio.php')
+      $http.post(ApiEndpoint.url+'premio.json')
       .success(success_callback)
       .error(function(data, status, headers, config) {
         alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");
@@ -62,7 +62,7 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
 	
   return {
     all: function(success_callback) {
-		  $http.post(ApiEndpoint.url+'sobre.php')
+		  $http.post(ApiEndpoint.url+'sobre.json')
       .success(success_callback)
       .error(function(data, status, headers, config) {
         alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");

@@ -1,7 +1,7 @@
 angular.module('simposio', ['ionic','simposio.controllers', 'simposio.services'])
 
 .constant('ApiEndpoint', {
-  url: 'http://sis.cejam.org.br/simposio/'
+  url: 'http://localhost:8100/api/'
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
