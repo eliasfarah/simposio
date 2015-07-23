@@ -4,7 +4,7 @@
   "proxies": [
     {
       "path": "/api",
-      "proxyUrl": "http://sis.cejam.org.br/simposio"
+      "proxyUrl": "http://sis.cejam.org.br/api_simposio"
     }
   ]
 }

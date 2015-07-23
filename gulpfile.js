@@ -54,7 +54,7 @@ var replaceFiles = ['./www/js/app.js'];
 
 gulp.task('dev', function() {
   return replace({
-    regex: "http://sis.cejam.org.br/simposio/",
+    regex: "http://sis.cejam.org.br/api_simposio/",
     replacement: "http://localhost:8100/api/",
     paths: replaceFiles,
     recursive: false,
@@ -65,7 +65,7 @@ gulp.task('dev', function() {
 gulp.task('prod', function() {
   return replace({
     regex: "http://localhost:8100/api/",
-    replacement: "http://sis.cejam.org.br/simposio/",
+    replacement: "http://sis.cejam.org.br/api_simposio/",
     paths: replaceFiles,
     recursive: false,
     silent: false,

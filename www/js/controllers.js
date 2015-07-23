@@ -102,8 +102,16 @@ angular.module('simposio.controllers', [])
 
 .controller('PalestranteDetalhesController', function($scope, $stateParams, Palestrantes, $utils) {
 	$utils.show();
+
 	Palestrantes.all(function(data){
-		$scope.palestrante = data[$stateParams.palestranteId];
+		$scope.palestrante = '';
+		angular.forEach(data, function(value, key) {
+	        if (value.id === $stateParams.palestranteId) {
+	            $scope.palestrante = value;
+
+	        }
+	    });
+
 		$utils.hide();
 	});
 })
