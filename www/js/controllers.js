@@ -100,20 +100,35 @@ angular.module('simposio.controllers', [])
 	}	
 })
 
-.controller('PalestranteDetalhesController', function($scope, $stateParams, Palestrantes, $utils) {
+.controller('PalestranteDetalhesController', function($scope, $stateParams, Palestrantes, $localstorage, $utils) {
 	$utils.show();
 
-	Palestrantes.all(function(data){
-		$scope.palestrante = '';
-		angular.forEach(data, function(value, key) {
-	        if (value.id === $stateParams.palestranteId) {
-	            $scope.palestrante = value;
+	$scope.update = function() {
+		Palestrantes.all(function(data) {
+			$localstorage.setObject('palestrantes', data);
+			$scope.palestrantes = data;
+			$scope.$broadcast('scroll.refreshComplete');
+			$utils.hide();
+		});
+	}
 
-	        }
-	    });
+	$scope.palestrante = '';
+	var palestrantes = $localstorage.getObject('palestrantes');
 
+	if(angular.equals({}, palestrantes)) {
+		$scope.update();
+	} else {
+		$scope.palestrantes = palestrantes;
 		$utils.hide();
-	});
+	}	
+
+	if(!angular.equals({}, $scope.palestrantes)) {		
+		angular.forEach($scope.palestrantes, function(value, key) {
+	        if (value.id === $stateParams.palestranteId) {
+	        	$scope.palestrante = value;
+	    	}
+		});
+	}	
 })
 
 .controller('LocalizacaoController', function($scope, Localizacao, $utils, $compile) {
