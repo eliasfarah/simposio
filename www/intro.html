@@ -1,25 +1,26 @@
 <ion-view view-title="Introdução">
 	<ion-nav-title>Introdução</ion-nav-title>
 	<ion-nav-buttons side="right">
-  		<button class="button button-default button-clear no-animation" ng-click="startApp()" ng-show="!slideIndex">
-      		Pular
-      	</button>
-      	<button class="button button-default button-clear no-animation" ng-click="startApp()" ng-show="slideIndex == 2">
-			Ir ao App
-		</button>
     </ion-nav-buttons>
 	<ion-slide-box on-slide-changed="slideChanged(index)">
 		<ion-slide>
-			Deslize para baixo para atualizar <br />
-			<img src="../img/intro.gif" />
+			<strong>Deslize para baixo para atualizar</strong> <br />&nbsp;<br />
+			<img src="img/intro.gif" height="50%" />
+			<button class="button button-full button-positive azul-cejam" ng-click="next()">
+				Ok, entendi...
+			</button>
 		</ion-slide>
 		<ion-slide>
-			Selecione as abas que lhe interessar <br />
-			<img src="../img/tabs.gif" />
+			<strong>Selecione as abas que lhe interessar</strong> <br />&nbsp;<br />
+			<img src="img/tabs.gif" height="50%" />
+			<button class="button button-full button-positive azul-cejam" ng-click="next()">
+				Ok, entendi...
+			</button>
 		</ion-slide>
 		<ion-slide>
-			Aproveite o evento <br />
-			<button class="button button-full button-positive" ng-click="startApp()">
+			<p><img src="img/cejam.png" /></p>
+			<h2>Aproveite o evento</h2> <br />&nbsp;<br />
+			<button class="button button-full button-positive azul-cejam" ng-click="startApp()">
 				Começar a usar o Aplicativo
 			</button>
 		</ion-slide>

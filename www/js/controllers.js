@@ -6,6 +6,14 @@ angular.module('simposio.controllers', [])
 		$state.go('tab.programacao');
 	};
 
+	$scope.next = function () {
+		$ionicSlideBoxDelegate.next();
+	}
+
+	$scope.previous = function () {
+		$ionicSlideBoxDelegate.previous();
+	}
+
 	// Called each time the slide changes
 	$scope.slideChanged = function(index) {
 		$scope.slideIndex = index;
