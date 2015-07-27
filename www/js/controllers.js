@@ -24,6 +24,7 @@ angular.module('simposio.controllers', [])
 
 	$utils.show();
 	$scope.update = function() {
+		$localstorage.setObject('programacoes', {});
 		Programacoes.all(function(data) {
 			$localstorage.setObject('programacoes', data);
 			$scope.programacoes = data;
@@ -60,6 +61,7 @@ angular.module('simposio.controllers', [])
 	}	
 	
 	$scope.update = function() {
+		$localstorage.setObject('programacoes', {});
 		Programacoes.all(function(data) {
 			$localstorage.setObject('programacoes', data);
 			$scope.$broadcast('scroll.refreshComplete');
@@ -82,6 +84,7 @@ angular.module('simposio.controllers', [])
 .controller('PalestrantesController', function($scope, Palestrantes, $localstorage, $utils){
 	$utils.show();
 	$scope.update = function() {
+		$localstorage.setObject('palestrantes', {});
 		Palestrantes.all(function(data) {
 			$localstorage.setObject('palestrantes', data);
 			$scope.palestrantes = data;
@@ -104,6 +107,7 @@ angular.module('simposio.controllers', [])
 	$utils.show();
 
 	$scope.update = function() {
+		$localstorage.setObject('palestrantes', {});
 		Palestrantes.all(function(data) {
 			$localstorage.setObject('palestrantes', data);
 			$scope.palestrantes = data;
@@ -199,6 +203,7 @@ angular.module('simposio.controllers', [])
 .controller('PremioRegulamentoController', function($scope, Sobre, $localstorage, $utils,Premio) {
 	$utils.show();
 	$scope.update = function() {
+		
 		Premio.all(function(data) {
 			$localstorage.setObject('premios', data);
 			$scope.premios = data;
@@ -220,6 +225,7 @@ angular.module('simposio.controllers', [])
 .controller('SobreController', function($scope, Sobre, $localstorage, $utils) {
 	$utils.show();
 	$scope.update = function() {
+		$localstorage.setObject('sobre', {});
 		Sobre.all(function(data) {
 			$localstorage.setObject('sobre', data);
 			$scope.sobre = data;

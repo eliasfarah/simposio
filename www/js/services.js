@@ -4,7 +4,7 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
 	
   return {
     all: function(success_callback) {      
-		  $http.get(ApiEndpoint.url+'palestrantes.json')
+		  $http.get(ApiEndpoint.url+'palestrantes.json?rnd='+new Date().getTime(), { cache: false })
       .success(success_callback)
       .error(function(data, status, headers, config) {        
         alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");                
@@ -19,7 +19,7 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
 	
   return {
     all: function(success_callback) {
-		  $http.get(ApiEndpoint.url+'programacao.json')
+		  $http.get(ApiEndpoint.url+'programacao.json?rnd='+new Date().getTime(), { cache: false })
       .success(success_callback)
       .error(function(data, status, headers, config) {
         alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");
@@ -33,7 +33,7 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
 .factory('Localizacao', function($resource, $http, $localstorage, $utils, ApiEndpoint) {
   return {
     all: function(success_callback) {
-		  $http.get(ApiEndpoint.url+'localizacao.json')
+		  $http.get(ApiEndpoint.url+'localizacao.json?rnd='+new Date().getTime(), { cache: false })
       .success(success_callback)
       .error(function(data, status, headers, config) {
         alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");
@@ -47,7 +47,7 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
 .factory('Premio', function($resource, $http, $localstorage, $utils, ApiEndpoint) {
   return {
     all: function(success_callback) {
-      $http.get(ApiEndpoint.url+'premio.json')
+      $http.get(ApiEndpoint.url+'premio.json?rnd='+new Date().getTime(), { cache: false  })
       .success(success_callback)
       .error(function(data, status, headers, config) {
         alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");
@@ -62,7 +62,7 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
 	
   return {
     all: function(success_callback) {
-		  $http.get(ApiEndpoint.url+'sobre.json')
+		  $http.get(ApiEndpoint.url+'sobre.json?rnd='+new Date().getTime(), { cache: false })
       .success(success_callback)
       .error(function(data, status, headers, config) {
         alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");
