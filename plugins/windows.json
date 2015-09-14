@@ -15,6 +15,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "simposio"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "Simpósio Científico CEJAM"
         }
     },
     "dependent_plugins": {}
