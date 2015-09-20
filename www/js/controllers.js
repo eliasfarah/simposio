@@ -1,13 +1,18 @@
 angular.module('simposio.controllers', [])
 
 .controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate, $localstorage) {
+	$scope.buttonText="OK, Entendi...";
 	// Called to navigate to the main app
 	$scope.startApp = function() {
-		$state.go('tab.programacao');
+		$state.go('tab.sobre');
 	};
 
 	$scope.next = function () {
-		$ionicSlideBoxDelegate.next();
+		if($ionicSlideBoxDelegate.currentIndex() == 2) {
+			$scope.startApp();
+		}
+
+		$ionicSlideBoxDelegate.next();		
 	}
 
 	$scope.previous = function () {
@@ -17,19 +22,46 @@ angular.module('simposio.controllers', [])
 	// Called each time the slide changes
 	$scope.slideChanged = function(index) {
 		$scope.slideIndex = index;
+
+		if($ionicSlideBoxDelegate.currentIndex() == 2) {			
+			$scope.buttonText="Iniciar";
+		} else {
+			$scope.buttonText="OK, Entendi...";
+		}
+		
 	};
 })
 
-.controller('ProgramacaoController', function($scope, $state, Programacoes, $localstorage, $utils) {
+.controller('SobreController', function($scope, Sobre, $localstorage, $utils, $state) {
 	var intro = $localstorage.getObject('intro');
 
-	if(angular.equals({}, intro)) {
+	if(angular.equals({}, intro)) {		
 		$localstorage.setObject('intro', { showed: true });
 		$state.go('intro');
-	} else {
-		$state.go('tab.programacao');
 	}
+	
+	$utils.show();
+	$scope.update = function() {
+		$localstorage.setObject('sobre', {});
+		Sobre.all(function(data) {
+			$localstorage.setObject('sobre', data);
+			$scope.sobre = data;
+			$scope.$broadcast('scroll.refreshComplete');
+			$utils.hide();
+		});
+	}
+	
+	var sobre = $localstorage.getObject('sobre');
 
+	if(angular.equals({}, sobre)) {
+		$scope.update();
+	} else {
+		$scope.sobre = sobre;
+	}
+	$utils.hide();
+})
+
+.controller('ProgramacaoController', function($scope, Programacoes, $localstorage, $utils) {
 	$utils.show();
 	$scope.update = function() {
 		$localstorage.setObject('programacoes', {});
@@ -226,28 +258,6 @@ angular.module('simposio.controllers', [])
 		$scope.update();
 	} else {
 		$scope.premios = premios;
-	}
-	$utils.hide();
-})
-
-.controller('SobreController', function($scope, Sobre, $localstorage, $utils) {
-	$utils.show();
-	$scope.update = function() {
-		$localstorage.setObject('sobre', {});
-		Sobre.all(function(data) {
-			$localstorage.setObject('sobre', data);
-			$scope.sobre = data;
-			$scope.$broadcast('scroll.refreshComplete');
-			$utils.hide();
-		});
-	}
-	
-	var sobre = $localstorage.getObject('sobre');
-
-	if(angular.equals({}, sobre)) {
-		$scope.update();
-	} else {
-		$scope.sobre = sobre;
 	}
 	$utils.hide();
 });

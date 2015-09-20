@@ -1,28 +1,49 @@
 <ion-view view-title="Introdução">
-	<ion-nav-title>Introdução</ion-nav-title>
-	<ion-nav-buttons side="right">
-    </ion-nav-buttons>
-	<ion-slide-box on-slide-changed="slideChanged(index)">
-		<ion-slide>
-			<strong>Deslize para baixo para atualizar</strong> <br />&nbsp;<br />
-			<img src="img/intro.gif" height="50%" />
-			<button class="button button-full button-positive azul-cejam" ng-click="next()">
-				Ok, entendi...
-			</button>
-		</ion-slide>
-		<ion-slide>
-			<strong>Selecione as abas que lhe interessar</strong> <br />&nbsp;<br />
-			<img src="img/tabs.gif" height="50%" />
-			<button class="button button-full button-positive azul-cejam" ng-click="next()">
-				Ok, entendi...
-			</button>
-		</ion-slide>
-		<ion-slide>
-			<p><img src="img/cejam.png" /></p>
-			<h2>Aproveite o evento</h2> <br />&nbsp;<br />
-			<button class="button button-full button-positive azul-cejam" ng-click="startApp()">
-				Começar a usar o Aplicativo
-			</button>
-		</ion-slide>
-    </ion-slide-box>	
-</ion-view>
+	<ion-nav-title>Introdução</ion-nav-title>	
+	<div class="row responsive-sm responsive-md responsive-lg">
+		<ion-slide-box on-slide-changed="slideChanged(index)">
+			<ion-slide>				
+				<div class="row">
+					<div class="col">
+		  				<span class="medium">Deslize para baixo para atualizar</span>
+					</div>
+				</div>
+				<div class="row">
+		  			<div class="col item-image">
+		  				<img src="img/intro1.png" />
+		  			</div>  			
+				</div>		
+
+			</ion-slide>
+			<ion-slide>
+				<div class="row">
+					<div class="col">
+		  				<span class="medium">Selecione as abas que interessar</span>
+		  			</div>
+				</div>
+				<div class="row">
+		  			<div class="col item-image">
+		  				<img src="img/intro2.png" />
+		  			</div>	  			
+				</div>
+			</ion-slide>
+			<ion-slide>
+
+				<div class="row">
+					<div class="col">
+		  				<span class="medium">Aproveite o evento</span>
+		  			</div>
+	  			</div>	  		
+				<div class="row">
+		  			<div class="col item-image">
+		  				<img src="img/intro3.png" />
+		  			</div>	  			
+				</div>
+				
+			</ion-slide>
+		</ion-slide-box>
+		<button class="button button-full button-positive azul-cejam" ng-click="next()">
+			{{buttonText}}
+		</button>
+	</div>
+</ion-view>	
