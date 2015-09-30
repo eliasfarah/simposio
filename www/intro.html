@@ -1,49 +1,67 @@
-<ion-view view-title="Introdução">
-	<ion-nav-title>Introdução</ion-nav-title>	
-	<div class="row responsive-sm responsive-md responsive-lg">
-		<ion-slide-box on-slide-changed="slideChanged(index)">
-			<ion-slide>				
-				<div class="row">
-					<div class="col">
-		  				<span class="medium">Deslize para baixo para atualizar</span>
-					</div>
-				</div>
-				<div class="row">
-		  			<div class="col item-image">
-		  				<img src="img/intro1.png" />
-		  			</div>  			
-				</div>		
+<ion-view view-title="Introdução" hide-nav-bar="true">
+  <ion-nav-title>Introdução</ion-nav-title> 
+  <div class="row responsive-sm responsive-md responsive-lg">
+    <div class="col">
+      <ion-slide-box on-slide-changed="slideChanged(index)">
+        <ion-slide>       
+          <div class="row">
+            <div class="col">
+                <span class="medium">Deslize para baixo para atualizar</span>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col item-image">
+                <img src="img/intro1.png" />
+              </div>        
+          </div>    
+          <div class="row">
+            <div class="col">
+              <button class="button button-full button-positive azul-cejam" ng-click="next()">
+                {{buttonText}}
+              </button>
+            </div>
+          </div>
 
-			</ion-slide>
-			<ion-slide>
-				<div class="row">
-					<div class="col">
-		  				<span class="medium">Selecione as abas que interessar</span>
-		  			</div>
-				</div>
-				<div class="row">
-		  			<div class="col item-image">
-		  				<img src="img/intro2.png" />
-		  			</div>	  			
-				</div>
-			</ion-slide>
-			<ion-slide>
-
-				<div class="row">
-					<div class="col">
-		  				<span class="medium">Aproveite o evento</span>
-		  			</div>
-	  			</div>	  		
-				<div class="row">
-		  			<div class="col item-image">
-		  				<img src="img/intro3.png" />
-		  			</div>	  			
-				</div>
-				
-			</ion-slide>
-		</ion-slide-box>
-		<button class="button button-full button-positive azul-cejam" ng-click="next()">
-			{{buttonText}}
-		</button>
-	</div>
-</ion-view>	
+        </ion-slide>
+        <ion-slide>
+          <div class="row">
+            <div class="col">
+                <span class="medium">Selecione as abas que interessar</span>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col item-image">
+                <img src="img/intro2.png" />
+              </div>          
+          </div>
+          <div class="row">
+            <div class="col">
+              <button class="button button-full button-positive azul-cejam" ng-click="next()">
+                {{buttonText}}
+              </button>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="row">
+            <div class="col">
+                <span class="medium">Aproveite o evento</span>
+              </div>
+            </div>        
+          <div class="row">
+              <div class="col item-image">
+                <img src="img/intro3.png" />
+              </div>          
+          </div>   
+          <div class="row">
+            <div class="col">
+              <button class="button button-full button-positive azul-cejam" ng-click="next()">
+                {{buttonText}}
+              </button>
+            </div>
+          </div>       
+        </ion-slide>
+      </ion-slide-box>
+    </div>
+  </div>
+</ion-view> 

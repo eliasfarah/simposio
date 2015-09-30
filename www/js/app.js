@@ -1,4 +1,4 @@
-angular.module('simposio', ['ionic','simposio.controllers', 'simposio.services'])
+angular.module('simposio', ['ionic','simposio.controllers', 'simposio.services','ngIOS9UIWebViewPatch'])
 
 .constant('ApiEndpoint', {
   url: 'http://sis.cejam.org.br/api_simposio/'

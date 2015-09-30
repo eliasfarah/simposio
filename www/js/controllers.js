@@ -1,6 +1,7 @@
 angular.module('simposio.controllers', [])
 
 .controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate, $localstorage) {
+
 	$scope.buttonText="OK, Entendi...";
 	// Called to navigate to the main app
 	$scope.startApp = function() {

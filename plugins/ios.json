@@ -13,6 +13,14 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"PushPlugin\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" value=\"CDVStatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
@@ -26,14 +34,6 @@
                         },
                         {
                             "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"PushPlugin\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -55,19 +55,19 @@
         "com.ionic.keyboard": {
             "PACKAGE_NAME": "com.cejam.simposio"
         },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.cejam.simposio"
-        },
-        "org.apache.cordova.device": {
-            "PACKAGE_NAME": "com.cejam.simposio"
-        },
         "com.phonegap.plugins.PushPlugin": {
+            "PACKAGE_NAME": "com.cejam.simposio"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.cejam.simposio"
+        },
+        "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.cejam.simposio"
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.cejam.simposio"
         },
-        "cordova-plugin-splashscreen": {
+        "org.apache.cordova.device": {
             "PACKAGE_NAME": "com.cejam.simposio"
         }
     },

@@ -6,7 +6,7 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
     all: function(success_callback) {      
 		  $http.get(ApiEndpoint.url+'palestrantes.json?rnd='+new Date().getTime(), { cache: false })
       .success(success_callback)
-      .error(function(data, status, headers, config) {        
+      .error(function(data, status, headers, config) {    
         alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");                
         $scope.$broadcast('scroll.refreshComplete');
         $utils.hide();
@@ -65,6 +65,7 @@ angular.module('simposio.services', ['ngResource','ionic.utils'])
 		  $http.get(ApiEndpoint.url+'sobre.json?rnd='+new Date().getTime(), { cache: false })
       .success(success_callback)
       .error(function(data, status, headers, config) {
+        alert(ApiEndpoint.url+'sobre.json?rnd='+new Date().getTime());
         alert("Ooops, algo deu errado, verifique sua conexão e tente novamente!");
         $scope.$broadcast('scroll.refreshComplete');
         $utils.hide();
